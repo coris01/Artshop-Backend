@@ -61,7 +61,8 @@ exports.logoutUser = catchAsyncErrors(async(req, res, next) => {
     })
 });
 
-// Forgot password
+// Forgot password // remove
+
 exports.forgotPassword = catchAsyncErrors(async(req, res, next) => {
     const user = await User.findOne({email:req.body.email});
 
@@ -138,7 +139,7 @@ exports.getUserDetails = catchAsyncErrors( async(req, res, next) => {
     });
 });
 
-// Update User Password
+// Update User Password // remove
 exports.updatePassword = catchAsyncErrors( async(req, res, next) => {
     const user = await User.findById(req.user.id).select("+password");
     

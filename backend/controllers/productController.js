@@ -34,7 +34,7 @@ exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
     })
 })
 
-//Update Product -- Admin
+//Update Product -- Admin 
 exports.updateProduct = catchAsyncErrors(async (req, res, next) => {
     let product = await Product.findById(req.params.id);
 

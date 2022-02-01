@@ -3,6 +3,11 @@ const app = express();
 const errorMiddleware = require("./middleware/error")
 const cookieParser = require("cookie-parser");
 
+//config
+if (process.env.NODE_ENV!=="PRODUCTION"){
+    require("dotenv").config({path: "backend/config/config.env"}); 
+}
+
 app.use(express.json())
 app.use(cookieParser());
 
