@@ -37,7 +37,21 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "user",
     },
-
+    gender: {
+        type: String,
+    },
+    Location: {
+        type: String
+    },
+    city: {
+        type: String
+    },
+    state: {
+        type: String
+    },
+    pin: {
+        type: Number
+    },
     resetPasswordToken: String,
     resetPasswordExpire: Date,
 });
